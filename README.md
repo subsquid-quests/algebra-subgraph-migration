@@ -10,17 +10,28 @@
 
 [Website](https://subsquid.io) | [Docs](https://docs.subsquid.io/) | [Discord](https://discord.gg/subsquid)
 
-# XXXXX Subgraph migration
+# Algebra Subgraph migration
 
-This quest is to migrate the [XXXXX subgraph](https://thegraph.com/explorer) to Squid SDK. The resulting squid should match the GraphQL API of the subgraph as close as possible, by migrating `schema.graphql`. The judges reserve the right to request improvements afther the initial review of the submission. Reach out to the [Discord Channel]( https://discord.com/channels/857105545135390731/1155812879770058783) for any tech questions regarding this quest. You can use the ```template``` squid as a starter.
+Migrate the [Algebra subgraph](https://thegraph.com/hosted-service/subgraph/stellaswap/pulsar) to Squid SDK.
+
+> [!IMPORTANT]
+> This quest is sponsored by [StellaSwap](https://stellaswap.com) who generously offered to provide two extra rewards of 500 USDT each. The rewards will be given to the authors of two submissions selected by StellaSwap from the pool of five Subsquid-selected winners. See [Special considerations](#special-considerations) for extra info.
+
+Subgraph source code is available at the `Algebra` folder or this repo. The resulting squid should match the GraphQL API of the subgraph as close as possible, by migrating `schema.graphql` (see [Permissible deviations](#permissible-deviations-from-the-subgraph-schema)). The judges reserve the right to request improvements afther the initial review of the submission. Reach out to the [Discord Channel]( https://discord.com/channels/857105545135390731/1155812879770058783) for any tech questions regarding this quest. You can use the ```template``` squid as a starter.
 
 # Quest Info
 
 | Category         | Skill Level                           | Time required (hours) | Max Participants | Reward                                | Status |
 | ---------------- | ------------------------------------- | --------------------- | ---------------- | ------------------------------------- | ------ |
-| Squid Deployment | $\textcolor{orange}{\textsf{Medium}}$ | ~60                   | 5                | $\textcolor{red}{\textsf{3000tSQD}}$  | open   |
+| Migration        | $\textcolor{orange}{\textsf{Medium}}$ | ~20                   | 5                | $\textcolor{red}{\textsf{400tSQD}} + StellaSwap rewards | open   |
+
+Two of the winning submissions will be selected by StellaSwap for extra rewards of 500 USDT each.
 
 # Acceptance criteria
+
+## General
+
+This section describes the criteria put forth by Subsquid. See [Special considerations](#special-considerations) for StellaSwap info.
 
 Ultimately, the solutions are accepted at the discretion of judges following a manual review. This sections is a rough guide that is in no way binding on our side.
 
@@ -54,11 +65,22 @@ It is desirable that your solution:
 
 To submit, invite the following github accounts to your private repo : [@dariaag](https://github.com/dariaag), [@belopash](https://github.com/belopash), [@abernatskiy](https://github.com/abernatskiy) and [@dzhelezov](https://github.com/dzhelezov).
 
+## Permissible deviations from the subgraph schema
+
+* You can use `String` in place of `Bytes` in your submissions
+* The only way to handle [many-to-many relations](https://docs.subsquid.io/sdk/reference/schema-file/entity-relations/#many-to-many-relations) in squids is by adding explicit join tables. Addition of such tables is an expected change when schemas with such relations are migrated.
+
+## Special considerations
+
+The subgraph took an extremely long time to sync on TheGraph. The StellaSwap team wants to improve upon that as much as possible. So, the advice is to pay extra attention to performance-related matters. Use [batch processing](https://docs.subsquid.io/sdk/resources/basics/batch-processing/) and [database indexes](https://docs.subsquid.io/sdk/reference/schema-file/indexes-and-constraints/) for best results.
+
 # Rewards
 
 tSQD rewards will be delivered via the [quests page](https://app.subsquid.io/quests) of Subsquid Cloud. Make sure you use the same GitHub handle to make a submission and when linking to that page.
 
-Winners will be listed at the quest repository README. If you do not wish to be listed please tell us that in an issue in your submission repo.
+USDT rewards from StellaSwap will be sent to addresses individually agreed upon with each winner. We'll make a GitHub issue in each of the winning repos for the discussion.
+
+Winners (both the five selected by Subsquid and the two selected by StellaSwap) will be listed at the quest repository README. If you do not wish to be listed please tell us that in an issue in your submission repo.
 
 # Useful links
 
