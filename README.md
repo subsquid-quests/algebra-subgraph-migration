@@ -15,7 +15,7 @@
 Migrate the [Algebra subgraph](https://thegraph.com/hosted-service/subgraph/stellaswap/pulsar) to Squid SDK.
 
 > [!IMPORTANT]
-> This quest is sponsored by [StellaSwap](https://stellaswap.com) who generously offered to provide two extra rewards of 500 USDT each. The rewards will be given to the authors of two submissions selected by StellaSwap from the pool of five Subsquid-selected winners. See [Special considerations](#special-considerations) for extra info.
+> This quest is sponsored by [StellaSwap](https://stellaswap.com) who generously offered to provide two extra rewards of $500 (in STELLA tokens) each. The rewards will be given to the authors of two submissions selected by StellaSwap from the pool of five Subsquid-selected winners. See [Special considerations](#special-considerations) for extra info.
 
 Subgraph source code is available at the `Algebra` folder or this repo. The resulting squid should match the GraphQL API of the subgraph as close as possible, by migrating `schema.graphql` (see [Permissible deviations](#permissible-deviations-from-the-subgraph-schema)). The judges reserve the right to request improvements afther the initial review of the submission. Reach out to the [Discord Channel]( https://discord.com/channels/857105545135390731/1155812879770058783) for any tech questions regarding this quest. You can use the ```template``` squid as a starter.
 
@@ -25,7 +25,7 @@ Subgraph source code is available at the `Algebra` folder or this repo. The resu
 | ---------------- | ------------------------------------- | --------------------- | ---------------- | ------------------------------------- | ------ |
 | Migration        | $\textcolor{orange}{\textsf{Medium}}$ | ~20                   | 5                | $\textcolor{red}{\textsf{400tSQD}}$ + StellaSwap rewards | open   |
 
-Two of the winning submissions will be selected by StellaSwap for extra rewards of 500 USDT each.
+Two of the winning submissions will be selected by StellaSwap for extra rewards of $500 (in STELLA tokens) each.
 
 # Acceptance criteria
 
@@ -63,6 +63,9 @@ It is desirable that your solution:
 
 **Please test your solutions before submitting.** We do allow some corrections, but judges' time is not limitless.
 
+> [!IMPORTANT]
+> To ensure fair competition and timely delivery of squids to StellaSwap, we limit the time allotted for post-deadline corrections to two weeks. The limit will be enforced.
+
 To submit, invite the following github accounts to your private repo : [@dariaag](https://github.com/dariaag), [@belopash](https://github.com/belopash), [@abernatskiy](https://github.com/abernatskiy) and [@dzhelezov](https://github.com/dzhelezov).
 
 ## Permissible deviations from the subgraph schema
@@ -78,7 +81,7 @@ The subgraph took an extremely long time to sync on TheGraph. The StellaSwap tea
 
 tSQD rewards will be delivered via the [quests page](https://app.subsquid.io/quests) of Subsquid Cloud. Make sure you use the same GitHub handle to make a submission and when linking to that page.
 
-USDT rewards from StellaSwap will be sent to addresses individually agreed upon with each winner. We'll make a GitHub issue in each of the winning repos for the discussion.
+STELLA rewards from StellaSwap will be sent to addresses individually agreed upon with each winner. We'll make a GitHub issue in each of the winning repos for the discussion.
 
 Winners (both the five selected by Subsquid and the two selected by StellaSwap) will be listed at the quest repository README. If you do not wish to be listed please tell us that in an issue in your submission repo.
 
