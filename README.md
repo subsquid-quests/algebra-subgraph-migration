@@ -25,7 +25,7 @@ Subgraph source code is available at the `Algebra` folder or this repo. The resu
 | ---------------- | ------------------------------------- | --------------------- | ---------------- | ------------------------------------- | ------ |
 | Migration        | $\textcolor{orange}{\textsf{Medium}}$ | ~20                   | 5                | $\textcolor{red}{\textsf{400tSQD}}$ + StellaSwap rewards | open   |
 
-Two of the winning submissions will be selected by StellaSwap for extra rewards of $\textcolor{green}{\textsf{&#36;500}}$ (in STELLA tokens) each.
+Two of the winning submissions will be selected by StellaSwap for extra rewards of $500 (in STELLA tokens) each.
 
 # Acceptance criteria
 
