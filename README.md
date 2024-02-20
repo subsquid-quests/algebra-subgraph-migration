@@ -23,7 +23,7 @@ Subgraph source code is available at the `Algebra` folder or this repo. The resu
 
 | Category         | Skill Level                           | Time required (hours) | Max Participants | Reward                                | Status |
 | ---------------- | ------------------------------------- | --------------------- | ---------------- | ------------------------------------- | ------ |
-| Migration        | $\textcolor{orange}{\textsf{Medium}}$ | ~20                   | 5                | $\textcolor{red}{\textsf{400tSQD}}$ + StellaSwap rewards | open   |
+| Migration        | $\textcolor{orange}{\textsf{Medium}}$ | ~20                   | 10               | $\textcolor{red}{\textsf{400tSQD}}$ + StellaSwap rewards | open   |
 
 Two of the winning submissions will be selected by StellaSwap for extra rewards of $500 (in STELLA tokens) each.
 
