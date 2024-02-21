@@ -661,7 +661,7 @@ export function handleChangeFee(event: ChangeFee): void {
   pool.fee = BigInt.fromI32(event.params.fee as i32)
   pool.save()
 
-  let fee = PoolFeeData.load(event.address.toHexString() + event.block.timestamp.toString())
+  let fee = PoolFeeData.load(event.block.timestamp.toString() + event.address.toHexString())
   if (fee == null){
     fee = new PoolFeeData(event.block.timestamp.toString() + event.address.toHexString())
     fee.pool = event.address.toHexString()
