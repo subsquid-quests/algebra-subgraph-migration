@@ -24,6 +24,8 @@ import { ethereum, BigInt } from '@graphprotocol/graph-ts'
  */
 export function updateAlgebraDayData(event: ethereum.Event): AlgebraDayData {
   let algebra = Factory.load(FACTORY_ADDRESS)!
+  // ? Fetching the Factory again from DB, while the Factory is changed inside the handlers and not persisted
+  // This `event` belongs to the same dayId (same day), yet it uses the old values of Factory
   let timestamp = event.block.timestamp.toI32()
   let dayID = timestamp / 86400 // rounded
   let dayStartTimestamp = dayID * 86400
@@ -52,6 +54,9 @@ export function updatePoolDayData(event: ethereum.Event): PoolDayData {
     .concat('-')
     .concat(dayID.toString())
   let pool = Pool.load(event.address.toHexString())!
+  // ? Fetching the Pool again from DB, while the Pool is changed inside the handlers and not persisted
+  // This `event` belongs to the same dayId (same day), yet it uses the old values of Pool
+
   let poolDayData = PoolDayData.load(dayPoolID)
   if (poolDayData === null) {
     poolDayData = new PoolDayData(dayPoolID)
@@ -136,6 +141,9 @@ export function updatePoolHourData(event: ethereum.Event): PoolHourData {
     .concat('-')
     .concat(hourIndex.toString())
   let pool = Pool.load(event.address.toHexString())!
+  // ? Fetching the Pool again from DB, while the Pool is changed inside the handlers and not persisted
+  // This `event` belongs to the same hourId (same hour), yet it uses the old values of Pool
+
   let poolHourData = PoolHourData.load(hourPoolID)
   if (poolHourData === null) {
     poolHourData = new PoolHourData(hourPoolID)
